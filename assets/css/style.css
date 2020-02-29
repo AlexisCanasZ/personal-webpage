@@ -1,0 +1,89 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.landingPage{
+	height: 100vh;
+	/* width: auto; */
+	/* background: #2c3e50; */
+	/* background:  */
+	/* top, transparent red, faked with gradient */ 
+	/* top, transparent red */ 
+    /* linear-gradient(
+      rgba(1, 20, 91, 0.85), 
+      rgba(1, 20, 91, 0.85)
+	), */
+	
+	background: #159957;
+	background: -webkit-linear-gradient(
+		rgba(21, 87, 153, 0.80), 
+		rgba(21, 153, 87, 0.8)
+	),
+	url(../img/programmer_2.jpg) no-repeat center center fixed; 
+	background: linear-gradient(
+		rgba(21, 87, 153, 0.80), 
+		rgba(21, 153, 87, 0.8)
+	),
+	url(../img/programmer_2.jpg) no-repeat center center fixed; 
+
+	
+    /* bottom, image */
+    /* url(../img/programmer_2.jpg) no-repeat center center fixed;  */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#linkFacebook,
+#linkInstagram,
+#linkEmail{
+	transition: all ease .25s;
+}
+
+#linkFacebook:hover{
+	color: #4267B2;
+}
+#linkInstagram:hover{
+	color: #D34C69;
+}
+#linkEmail:hover{
+	color: #4CAF50;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+	/* background: #000; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	text-align: center;
+}
+
+.container .texts{
+	color: #fff;
+}
+
+.container .texts h1{
+	font-size: 5rem;
+	font-weight: 700;
+}
+
+@media (max-width: 785px){
+	.container .texts h1{
+		font-size: 3rem;
+		font-weight: 700;
+	}
+	.container .texts h2{
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+}
