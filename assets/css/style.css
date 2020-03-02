@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
 
 *{
 	margin: 0;
@@ -9,56 +10,78 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-.landingPage{
-	height: 100vh;
-	/* width: auto; */
-	/* background: #2c3e50; */
-	/* background:  */
-	/* top, transparent red, faked with gradient */ 
-	/* top, transparent red */ 
-    /* linear-gradient(
-      rgba(1, 20, 91, 0.85), 
-      rgba(1, 20, 91, 0.85)
-	), */
-	
-	background: #159957;
-	background: -webkit-linear-gradient(
-		rgba(21, 87, 153, 0.80), 
-		rgba(21, 153, 87, 0.8)
-	),
-	url(../img/programmer_2.jpg) no-repeat center center fixed; 
-	background: linear-gradient(
-		rgba(21, 87, 153, 0.80), 
-		rgba(21, 153, 87, 0.8)
-	),
-	url(../img/programmer_2.jpg) no-repeat center center fixed; 
-
-	
-    /* bottom, image */
-    /* url(../img/programmer_2.jpg) no-repeat center center fixed;  */
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+/* Estilos del navbar */
+.navbar{
+	transition: all ease-in-out 150ms;
 }
 
+.navbarTransparent{
+	background-color: transparent!important;
+}
+
+.navbarColored{
+	background: rgb(21, 87, 153)!important;
+}
+
+.toBottom{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.toTop{
+	transform:  rotate(180deg);
+}
+
+/* Estilos de los botones del navbar */
 #linkFacebook,
 #linkInstagram,
 #linkEmail{
+	color: #fff;
+	background-color: transparent;
+	font-weight: 700;
 	transition: all ease .25s;
 }
 
+#linkFacebook .fa-external-link-square-alt,
+#linkInstagram .fa-external-link-square-alt,
+#linkEmail .fa-external-link-square-alt{
+	opacity: 0;
+	color: transparent;
+	transition: all ease .25s;
+}
+
+#linkFacebook:hover .fa-external-link-square-alt{
+	color: #4267B2;
+	opacity: 1;
+}
+
+#linkInstagram:hover .fa-external-link-square-alt{
+	color: #D34C69;
+	opacity: 1;
+}
+
+#linkEmail:hover .fa-external-link-square-alt{
+	color: #4CAF50;
+	opacity: 1;
+}
+
+/* Estilos de botones del navbar al hacer :hover */
 #linkFacebook:hover{
 	color: #4267B2;
+	background-color: #fff;	
 }
+
 #linkInstagram:hover{
 	color: #D34C69;
+	background-color: #fff;	
 }
 #linkEmail:hover{
 	color: #4CAF50;
+	background-color: #fff;	
 }
 
-.container{
+.landingPage .container{
 	width: 100%;
 	height: 100%;
 	/* background: #000; */
@@ -69,15 +92,99 @@
 	text-align: center;
 }
 
-.container .texts{
+.landingPage .container .texts{
 	color: #fff;
 }
 
-.container .texts h1{
-	font-size: 5rem;
+.landingPage .container .texts h1 .greenWord{
+	color: #78EBB9;
+}
+
+.landingPage .container .texts h1{
+	/* font-size: 5rem; estilos para el estilo anterior*/
+	font-size: 3.25rem;
 	font-weight: 700;
 }
 
+.landingPage .container .texts h2{
+	/* font-size: 5rem; estilos para el estilo anterior*/
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.landingPage,
+.clientes{
+	height: 100vh;
+	position: relative;
+	background: #159957;
+	background: -webkit-linear-gradient(
+		rgba(21, 87, 153, 0.80), 
+		rgba(21, 153, 87, 0.8)
+	),
+	url(../img/programmer_2.jpg) no-repeat center center fixed; 
+	background: linear-gradient(
+		rgba(21, 87, 153, 0.80), 
+		rgba(21, 153, 87, 0.8)
+	),
+	url(../img/programmer_2.jpg) no-repeat center center fixed;
+    /* bottom, image */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+/* Estilos de los sections en general */
+.tituloSection{
+	position: relative;
+	text-transform: uppercase;
+}
+.tituloSection:after{
+	content: '';
+	width: 300px;
+	background: #78EBB9;
+	position: absolute;
+	z-index: -1;
+	left: 50%;
+	bottom: 5px;
+	transform: translate(-150px, 0);
+	height: 7.5px;;
+
+}
+
+
+.contenedorCards{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+}
+
+
+.cardService{
+	background:#fff;
+	width: 480px;
+	height: 480px;
+}
+
+.cardService .cardImg{
+	background: #0D569A;
+	padding: 25px;
+}
+
+.cardService .cardImg img{
+	filter: invert(1);
+}
+
+.cardService .listServices{
+	/* background: crimson; */
+	height: auto;
+}
+
+
+/* Estilos responsive (Media) */
 @media (max-width: 785px){
 	.container .texts h1{
 		font-size: 3rem;
